@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+
+    <!-- Extend form -->
+    <record id="view_form_res_partner_inherited" model="ir.ui.view">
+      <field name="name">View etendu pour client keyfa </field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+
+  <!-- cacher quelques champs du  du formulaire client -->
+          <field name="company_type" position="attributes">
+          <attribute name="invisible">1</attribute>
+          </field>
+          <field name="parent_id" position="attributes">
+          <attribute name="invisible">1</attribute>
+          </field>
+          <field name="street2" position="attributes">
+          <attribute name="invisible">1</attribute>
+          </field>
+          <field name="fax" position="attributes">
+          <attribute name="invisible">1</attribute>
+          </field>
+          <field name="title" position="attributes">
+          <attribute name="invisible">1</attribute>
+          </field>
+         
+          <field name="function" position="attributes">
+          <attribute name="invisible">1</attribute>
+          </field>
+          <field name="mobile" position="attributes">
+            <attribute name="invisible">1</attribute>
+          </field>
+
+
+          <field name="website" position="attributes">
+            <attribute name="invisible">1</attribute>
+          </field>
+
+
+            <!-- cacher la page conact et addresse du formulaire client -->
+            <xpath expr="//notebook/page[1]" position="attributes">
+            <attribute name="invisible">1</attribute>
+        </xpath>
+        <field name="child_ids" position="attributes">
+            <attribute name="invisible">1</attribute>
+          </field>
+        
+        
+        
+
+        </field>
+
+    </record>
+
+</odoo>
